@@ -1,2 +1,6 @@
-# redm-idoverhead
-RedM® id above the head
+### Installation
+- Add this text in your `server.cfg` :
+```
+ensure redm-idoverhead
+```
+
