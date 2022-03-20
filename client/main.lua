@@ -1,6 +1,5 @@
 
 local Text = nil
-local EnableTag = false
 Citizen.CreateThread(function()
 	while true do
 		Citizen.Wait(0)
@@ -16,33 +15,14 @@ Citizen.CreateThread(function()
 							text = "~d~Talking~s~("..GetPlayerServerId(playerId)..")"
 						end
 						DrawText3D(bone.x, bone.y, bone.z + 1.3, ''..text..'')
-						EnableTag = false
-					else
-						EnableTag = true
 					end
 				end
-			end
-			if EnableTag then
-				DrawText3D(bone.x, bone.y, bone.z + 1.3, ''..GetPlayerTag()..'')
 			end
 		end
 	end
 end)
 
 --------------- function's ---------------
-
--- Tag
-function SetPlayerTag(tag)
-	Text = tag
-end
-
-function GetPlayerTag()
-	return Text
-end
-
-function ResetPlayerTag()
-	Text = nil
-end
 
 -- Draw Text
 function DrawText3D(x, y, z, text)
