@@ -13,10 +13,3 @@ shared_script {
 client_scripts {
     'client/main.lua',
 }
-
-
-exports {
-    'SetPlayerTag',
-    'GetPlayerTag',
-    'ResetPlayerTag',
-}
